@@ -1,21 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
 interface MeetingModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    title: string;
-    isJoinMeeting: boolean;
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  isJoinMeeting: boolean;
 }
-const MeetingModal = ({isOpen ,onClose,title,isJoinMeeting } : MeetingModalProps) => {
-    const [MeetingUrl ,setMeetingUrl] = useState("");
-    const createMeeting = async () => {}
-    const joinMeeting = async () => {}
-    const handleStart = () =>{}
-    return (
- <Dialog open={isOpen} onOpenChange={onClose}>
+const MeetingModal = ({
+  isOpen,
+  onClose,
+  title,
+  isJoinMeeting,
+}: MeetingModalProps) => {
+  const [MeetingUrl, setMeetingUrl] = useState("");
+  const createMeeting = async () => {};
+  const joinMeeting = async () => {};
+  const handleStart = () => {};
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
@@ -34,14 +39,17 @@ const MeetingModal = ({isOpen ,onClose,title,isJoinMeeting } : MeetingModalProps
             <Button variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button onClick={handleStart} disabled={isJoinMeeting && !MeetingUrl.trim()}>
+            <Button
+              onClick={handleStart}
+              disabled={isJoinMeeting && !MeetingUrl.trim()}
+            >
               {isJoinMeeting ? "Join Meeting" : "Start Meeting"}
             </Button>
           </div>
         </div>
       </DialogContent>
-    </Dialog>    
-  )
-}
+    </Dialog>
+  );
+};
 
-export default MeetingModal
+export default MeetingModal;
