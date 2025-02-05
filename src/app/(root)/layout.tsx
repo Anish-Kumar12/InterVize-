@@ -3,7 +3,7 @@ import StreamClientProvider from "@/components/providers/SteamClientProvider";
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-  return <StreamClientProvider>{children}</StreamClientProvider>;
+  <StreamClientProvider>{children}</StreamClientProvider>
   </div>
   )
 }

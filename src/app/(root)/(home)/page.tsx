@@ -12,7 +12,7 @@ import { useState } from "react";
 import LoaderUI from "@/components/LoaderUI";
 import MeetingModal from "@/components/MeetingModal";
 
-export default function Home() {
+ function Home() {
   const router = useRouter();
 
   const { isInterviewer, isCandidate, isLoading } = useUserRole();
@@ -76,3 +76,4 @@ export default function Home() {
     </div>
   );
 }
+export default Home;
