@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { api } from "../../../../convex/_generated/api";
 import { useState } from "react";
 import LoaderUI from "@/components/LoaderUI";
+import MeetingModal from "@/components/MeetingModal";
 
 export default function Home() {
   const router = useRouter();
@@ -58,6 +59,12 @@ export default function Home() {
               />
             ))}{" "}
           </div>
+          <MeetingModal
+            isOpen={showModal}
+            onClose={() => setShowModal(false)}
+            title={modalType === "join" ? "Join Meeting" : "Start Meeting"}
+            isJoinMeeting={modalType === "join"}
+          />
         </>
       ) : (
         <>
