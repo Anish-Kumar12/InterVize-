@@ -5,8 +5,11 @@ import { calculateRecordingDuration } from "@/lib/utils";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { CalendarIcon, ClockIcon, CopyIcon, PlayIcon } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState } from "react";
 
 function RecordingCard({ recording }: { recording: CallRecording }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(recording.url);
@@ -48,15 +51,22 @@ function RecordingCard({ recording }: { recording: CallRecording }) {
       <CardContent>
         <div
           className="w-full aspect-video bg-muted/50 rounded-lg flex items-center justify-center cursor-pointer group"
-          onClick={() => window.open(recording.url, "_blank")}
+          onClick={() => setIsPlaying(true)}
         >
-          <div className="size-12 rounded-full bg-background/90 flex items-center justify-center group-hover:bg-primary transition-colors">
-            <PlayIcon className="size-6 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
-          </div>
+          {!isPlaying ? (
+            <div className="size-12 rounded-full bg-background/90 flex items-center justify-center group-hover:bg-primary transition-colors">
+              <PlayIcon className="size-6 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
+            </div>
+          ) : (
+            <video controls className="w-full h-full rounded-lg">
+              <source src={recording.url} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          )}
         </div>
       </CardContent>
       <CardFooter className="gap-2">
-        <Button className="flex-1" onClick={() => window.open(recording.url, "_blank")}>
+        <Button className="flex-1" onClick={() => setIsPlaying(true)}>
           <PlayIcon className="size-4 mr-2" />
           Play Recording
         </Button>
