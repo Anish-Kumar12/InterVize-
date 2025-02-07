@@ -16,7 +16,7 @@ function EndCallButton() {
 
   const interview = useQuery(api.interviews.getInterviewByStreamCallId, {
     streamCallId: call?.id || "",
-  });
+  }); 
 
   if (!call || !interview) return null;
 
