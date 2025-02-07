@@ -15,7 +15,7 @@ InterVize is a modern **real-time interview platform** that simplifies the techn
 ## 📸 Screenshots
 
 ### **Dashboard**
-![InterVize Dashboard]([https://github.com/your-username/intervize/blob/main/assets/dashboard.png](https://github.com/Anish-Kumar12/InterVize-/blob/main/assests/Screenshot%202025-02-08%20015848.png))
+![InterVize Dashboard](assests/Screenshot%202025-02-08%20015848.png)
 
 ### **Video Interview Interface**
 ![Video Interview](https://github.com/your-username/intervize/blob/main/assets/video-interview.png)
