@@ -2,7 +2,7 @@
 
 InterVize is a modern **real-time interview platform** that simplifies the technical hiring process by integrating **video calls, live coding assessments, and structured feedback** into one seamless experience.
 
-![](assests/Screenshot%202025-02-08%20020722.png)
+![](assests/Screenshot%202025-02-08%20015755.png)
 
 
 ## 🚀 Features
