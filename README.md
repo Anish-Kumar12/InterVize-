@@ -2,6 +2,9 @@
 
 InterVize is a modern **real-time interview platform** that simplifies the technical hiring process by integrating **video calls, live coding assessments, and structured feedback** into one seamless experience.
 
+![](assests/Screenshot%202025-02-08%20020722.png)
+
+
 ## 🚀 Features
 
 - **Real-time Video Interviews** – High-quality video calls powered by [Stream Video SDK](https://getstream.io/video/).
@@ -18,10 +21,8 @@ InterVize is a modern **real-time interview platform** that simplifies the techn
 ![InterVize Dashboard](assests/Screenshot%202025-02-08%20015848.png)
 
 ### **Video Interview Interface**
-![Video Interview](https://github.com/your-username/intervize/blob/main/assets/video-interview.png)
+![Video Interview](assests/Screenshot%202025-02-08%20020722.png)
 
-### **Live Coding Editor**
-![Coding Editor](https://github.com/your-username/intervize/blob/main/assets/coding-editor.png)
 
 ## 🛠 Tech Stack
 
